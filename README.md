@@ -1,56 +1,57 @@
 # debt-app
-Objectives
-Who am I designing for?
-supermarket owners.
-Gender: male
-Education: can read and write, can use computer and smart phones.
-What kinds of tasks and goals will your persona be accomplishing as he/she is using your website or app?
+### Objectives
+#### Who am I designing for?
+* supermarket owners.
+* Gender: male
+* Education: can read and write, can use computer and smart phones.
 
-Reduce the efforts of writing on papers and mone>
-Avoiding mistakes in manual recording>
-Tracking employees activities/records who wrote this dept??)
-Find a way to notify customers about special offers.
-When will your persona be engaging with your product?
-As long as the supermarket is opened.
-Where will your persona be using what you are designing?
+#### What kinds of tasks and goals will your persona be accomplishing as he/she is using your website or app?
+* Reduce the efforts of writing on papers and mone.
+* Avoiding mistakes in manual recording.
+* Tracking employees activities/records who wrote this dept??
+* Find a way to notify customers about special offers.
 
-In supermarkets of Palestine.
-Why is your persona choosing to use what you’ve designed and what drives this behavior?
-Because it is easy to use.
-affordable ( free ).
-Reliable.
-Doesn’t require a knowledge about computer or accounting.
-Specific for supermarkets’ owners and their customers.
-How will they be using it?
-Have a secure account to protect the data.
-Can add new customers, delete customers, edit customers’ data and status.
-Can add new debt for the customers and delete it when he payback.
+#### When will your persona be engaging with your product?
+* As long as the supermarket is opened.
 
- Hypotheses
-In a few bullet points- by building this app, what are you looking to prove?
-The supermarkets’ owner needs an application to help him in organizing the debts.
-The supermarkets’ owners wants to get red of the reading and writing in notebooks or papers.
-Secondary Research
+#### Where will your persona be using what you are designing?
+* In supermarkets of Palestine.
 
-After searching for similar applications we found the following:
-First : Al aseel Application:
+#### Why is your persona choosing to use what you’ve designed and what drives this behavior?
+* Because it is easy to use.
+* affordable ( free ).
+* Reliable.
+* Doesn’t require a knowledge about computer or accounting.
+* Specific for supermarkets’ owners and their customers.
+
+#### How will they be using it?
+* Have a secure account to protect the data.
+* Can add new customers, delete customers, edit customers’ data and status.
+* Can add new debt for the customers and delete it when he payback.
+
+#### Hypotheses
+* The supermarkets’ owner needs an application to help him in organizing the debts.
+* The supermarkets’ owners wants to get red of the reading and writing in notebooks or papers.
+
+### Secondary Research
+* After searching for similar applications we found the following:
+* **First : Al aseel Application:**
 The application is too complicated to use.
 The application needs accounting knowledge.
 The application is desktop versions.
 The application is not specific for managing debts.
 The application is expensive.
-Second: Other applications ( AO debt manager – debt tracker)
+* **Second: Other applications ( AO debt manager – debt tracker)**
 All the applications are for personal use.
 Does not provide reports.
 Not reliable.
 All applications are in English language.(Does not support Arabic).
 All applications are mobile versions.
-Third :
-برنامج لإدارة ديون زبائن المحلات التجارية
+* **Third :**برنامج لإدارة ديون زبائن المحلات التجارية
 Local version (not online)
 Expensive.
 
-Persona
+### Persona
 Ahmed Abu Kamel, 26, Gaza.
 I am a supermarket owner, I stay in the supermarket from 6am to 4 pm. Ten I go home to have my dinner. After that I go to hangout with my frinds until 9pm. After that I go home to watch a movie until 12 am the go to bed.
 I hope to find away that helps me in my work in the supermarket and reduce workload specially in accounting and debt recording using papers. I hardly manage to keep my debt records, with mistakes and spending lots of time to write them down.
@@ -59,7 +60,7 @@ I aspire to reduce work pressure and facilitate debt management and accounting w
 I like hanging out, watching movie, and organizing time, but I hate work pressure.
 
 
-Surveying:
+### Surveying:
 Opening questions: -----------------------------------------------------------
 How do you do? How are you?
 How is your work going?
