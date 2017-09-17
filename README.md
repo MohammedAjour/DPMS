@@ -108,7 +108,11 @@ Did you try any application to solve your problems?
 
 If there is an application that solve your problems will you use it?
 
- 
+### User Tasks:
+* Login and add new customer.
+* add new debts to the customer you have jsut created.
+* logout from your account.
+
  #### Synthesis
  From the users interviews, we came across a few interesting findings:
  our first hypothes which states that the supermarket owners need an app to help them organizing the debts was certainly true, but the second hypotheses which states the supermarket owners want to get rid of the reading and writing in notebooks or papers was not fully true, 50% of our sample accepted it, but the rest had a lack of trust in dealing with the apps only, and refused to leave the debt registration in the notebooks.
