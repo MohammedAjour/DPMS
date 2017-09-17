@@ -1,4 +1,6 @@
-# debt-app
+# Super Market Debt manager
+ > It's a simple web based application that help super markets owners and cashier to manage thier customers debts in a simple way ,reliable ,consistent and efficient. 
+ 
 ### Objectives
 #### Who am I designing for?
 * supermarket owners.
@@ -109,6 +111,15 @@ If there is an application that solve your problems will you use it?
  
  #### Synthesis
  From the users interviews, we came across a few interesting findings:
- our first hypothes which states that the supermarket owners need an app to help thim in organizing the debts was certainly true, but the second hypotheses which states the supermarket owners want to get red of the reading and writing in notebooks or papers was not fully true, 50% of our sample accepted it, but the rest had a lack of confidence in dealing with the apps only, and refused to leave the debt registration in the book.
+ our first hypothes which states that the supermarket owners need an app to help them organizing the debts was certainly true, but the second hypotheses which states the supermarket owners want to get rid of the reading and writing in notebooks or papers was not fully true, 50% of our sample accepted it, but the rest had a lack of trust in dealing with the apps only, and refused to leave the debt registration in the notebooks.
  
+ ### Some Other observations:
+  * For some of them it seems that they find it easy to use, 
+  * And some of them had trouble with adding multiple debts from the add debt page.
+  one of Them didn't get the idea about the testing and it's just a prototype !!however we clearaify and explain it at the start of the session but they still not getting it! .
+  one of the users that were tested was trying to do other operations like search and deleting customer account and clear a customer balance,and kept complaining about that !
 
+## See the [Prototype](https://projects.invisionapp.com/share/USDIT1OE7)
+```javascript 
+Groups.kea_members = { 'aya' , 'kefah' ,'eslam' } 
+```
