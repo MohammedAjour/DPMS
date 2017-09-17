@@ -53,10 +53,14 @@ Expensive.
 
 ### Persona
 Ahmed Abu Kamel, 26, Gaza.
+
 I am a supermarket owner, I stay in the supermarket from 6am to 4 pm. Ten I go home to have my dinner. After that I go to hangout with my frinds until 9pm. After that I go home to watch a movie until 12 am the go to bed.
+
 I hope to find away that helps me in my work in the supermarket and reduce workload specially in accounting and debt recording using papers. I hardly manage to keep my debt records, with mistakes and spending lots of time to write them down.
 Sometimes I forget to write the debt because I have lots of customers in the same time.
+
 I aspire to reduce work pressure and facilitate debt management and accounting work.
+
 I like hanging out, watching movie, and organizing time, but I hate work pressure.
 
 
