@@ -49,7 +49,7 @@ Does not provide reports.
 Not reliable.
 All applications are in English language.(Does not support Arabic).
 All applications are mobile versions.
-* **Third :**برنامج لإدارة ديون زبائن المحلات التجارية
+* **Third:** برنامج لإدارة ديون زبائن المحلات التجارية
 Local version (not online)
 Expensive.
 
