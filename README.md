@@ -66,27 +66,28 @@ I like hanging out, watching movie, and organizing time, but I hate work pressur
 
 ### Surveying:
 
-**Opening questions:** 
+ **Opening questions:** 
 How do you do? How are you?
 How is your work going?
 How many hours do you spend at your work?
+
+ **Deeper questions:**
 Do you provide debt service for your customers?
 How do you manage your debt?
-If paper ===> How do you feel about it?
+If paper How do you feel about it?
 
-
-**Deeper questions:**
+ **Specific questions about you app idea:**
 Do you like technology?
 Did you try any application to solve your problems?
-If yes
+  If yes
    How do you find it? Does it solve all your problems? Or do you still have problems?
-If yes
+    If yes
       Are you still using the same application?
-If no
+    If no
       Why did you stop using it?
-If no 
+   If no 
     Why you did not try?
 If there is an application that solve your problems will you use it?
 
-**Specific questions about you app idea: **
+ 
 
