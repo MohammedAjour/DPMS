@@ -1,0 +1,30 @@
+{
+  "name": "SuperMarkets_Debt_Manager",
+  "version": "1.0.0",
+  "description": "> It's a simple web based application that help super markets owners and cashier to manage thier customers debts in a simple way ,reliable ,consistent and efficient.",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape ./test/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FACG2/SuperMarkets_Debt_Manager.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FACG2/SuperMarkets_Debt_Manager/issues"
+  },
+  "homepage": "https://github.com/FACG2/SuperMarkets_Debt_Manager#readme",
+  "devDependencies": {
+    "shot": "^3.4.2",
+    "tape": "^4.8.0",
+    "nodemon": "^1.12.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4",
+    "express-handlebars": "^3.0.0"
+  }
+}
