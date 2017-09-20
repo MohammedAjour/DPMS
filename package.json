@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "tape ./test/*.test.js",
-    "watch":"nodemon app/index.js"
+    "watch": "nodemon app/index.js"
   },
   "repository": {
     "type": "git",
