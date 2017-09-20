@@ -3,8 +3,8 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 const path = require('path');
 
-const controller = require('./controller/index');
-const helpers = require('./views/helpers/index');
+const router = require('./controller/index.js');
+// const helpers = require('./views/helpers/index');
 
 const app = express();
 
@@ -13,16 +13,15 @@ app.set('views engine', 'hbs');
 
 app.engine(
   'hbs',
-  exports({
+  exphbs({
     extname: 'hbs',
     layoutsDir: path.join(__dirname, 'views', 'layouts'),
     partialsDir: path.join(__dirname, 'views', 'partials'),
-    defaultLayout: 'main',
-    helpers: helpers
+    defaultLayout: 'main'
+    // helpers: helpers
   })
 );
-
 app.set('port', process.env.PORT || 4000);
-app.use(controller);
+app.use(router);
 
 module.exports = app;
