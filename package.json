@@ -4,7 +4,8 @@
   "description": "> It's a simple web based application that help super markets owners and cashier to manage thier customers debts in a simple way ,reliable ,consistent and efficient.",
   "main": "index.js",
   "scripts": {
-    "test": "tape ./test/*.test.js"
+    "test": "tape ./test/*.test.js",
+    "watch": "nodemon app/index.js"
   },
   "repository": {
     "type": "git",
