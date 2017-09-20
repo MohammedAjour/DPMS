@@ -23,13 +23,12 @@ test('Testing queries on the database', (t) => {
     } else {
       t.equal(res.rows.length, 3, 'Should not be empty');
       t.end();
-      connection.end();
     }
   });
 });
 
-test('Testing queries on the database', (t) => {
-  const sql = 'SELECT * FROM customers';
+test('Testing customers with user_id = 2', (t) => {
+  const sql = 'SELECT * FROM customers WHERE user_id = 2 ';
   connection.query(sql, (err, res) => {
     if (err) {
       t.notOk(!err, err);
@@ -37,7 +36,6 @@ test('Testing queries on the database', (t) => {
     } else {
       t.equal(res.rows.length, 3, 'Should not be empty');
       t.end();
-      connection.end();
     }
   });
 });
@@ -49,9 +47,8 @@ test('Testing queries on the database', (t) => {
       t.notOk(!err, err);
       t.end();
     } else {
-      t.equal(res.rows.length, 6, 'Should not be empty');
+      t.equal(res.rows.length, 5, 'Should not be empty');
       t.end();
-      connection.end();
     }
   });
 });
