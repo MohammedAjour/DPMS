@@ -25,7 +25,9 @@
   },
   "dependencies": {
     "body-parser": "^1.18.1",
+    "env2": "^2.2.0",
     "express": "^4.15.4",
-    "express-handlebars": "^3.0.0"
+    "express-handlebars": "^3.0.0",
+    "pg": "^7.3.0"
   }
 }
