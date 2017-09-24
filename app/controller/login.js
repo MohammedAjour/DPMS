@@ -5,5 +5,6 @@ exports.post = (req, res) => {
   res.send('login');
 };
 exports.get = (req, res) => {
-  res.send(q);
+  console.log('login form');
+  res.render('login');
 };

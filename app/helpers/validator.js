@@ -4,7 +4,6 @@ exports.regFormValidator = (userSubmitedData) => {
   let valid = false;
   let message = {};
   if (userSubmitedData.username !== '' && userSubmitedData.password !== '') {
-    console.log(userSubmitedData);
     if (!userSubmitedData.username.trim().length < 3) {
       if (!userSubmitedData.password.trim().length < 6) {
         if (regexEmailValidator.test(userSubmitedData.email.trim())) {
