@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+<script type="text/javascript">
+function search () {
+  if (event.keyCode == 13) {
+    alert('The value is' + document.getElementById('inputval').value);
+  }
+}
+</script>
+
+<input id = 'inputval' type="text" placeholder="some text" class="search" onkeydown="search()"/>
+<!-- <input type="text" placeholder="some text" class="search" onkeydown="search()"/> -->
+
+
+  </body>
+</html>

@@ -1,0 +1,146 @@
+/*COLORS
+
+#d9dde0 = GRAY
+#838587 = DARK GRAY
+#184572 = active link dark bleu
+#1980e8 = showcase blue
+COLORS*/
+
+
+
+/* Start Main Rules */
+body{
+margin: auto;
+direction: rtl;
+background-color: #d9dde0;
+height: 600px;
+width: 80%;
+}
+
+.container{
+  width: 1170px;
+  margin: auto;
+}
+
+.clearfix {
+  clear: both;
+}
+/* End Main Rules */
+
+/*START HEADER PART*/
+
+.header{
+  background-color: #373d42;
+}
+
+.header .container{
+  width: inherit;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .container div:last-of-type{
+  margin-left: 20px;
+}
+/*NAV BAR*/
+
+.header .navbar{
+  color: #fff;
+  overflow: hidden;
+}
+
+.header .navbar h2 {
+  display: flex;
+  justify-content: center;
+  /*float: left;*/
+  margin-left: 50px;
+  overflow: hidden;
+  font-family: 'Baloo Bhaijaan', cursive;
+}
+
+
+.header .navbar ul{
+  display: block;
+  list-style: none;
+  padding-left: 0;
+  overflow: hidden;
+  float: right;
+  margin-right: 20px;
+}
+
+.header .navbar ul li{
+  float: left;
+  padding: 10px;
+}
+
+.header .navbar ul li a{
+  /*float: left;
+  padding: 10px;*/
+  text-decoration: none;
+  color: #fff;
+}
+
+.header .navbar ul li a:hover,
+.header .navbar ul li.active a{
+  color: #70b7ff;
+}
+/*END NAVBAR*/
+
+/*SHOWCASE*/
+.header .showcase{
+  -webkit-background-size: cover;  /*  CSS3  */
+  -moz-background-size: cover;  /*  CSS3  */
+  -o-background-size: cover;  /*  CSS3  */
+  background-size: cover;  /*  CSS3  */
+  height: 600px;
+}
+
+.showcase{
+  background-color: #afcdea;
+}
+
+/*END SHOWCASE*/
+
+/*END HEADER PART*/
+
+/*START BODY PART*/
+
+/*END BODY PART*/
+
+/*START FOOTER PART*/
+.footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  background-color: #838587;
+}
+/*END FOOTER PART*/
+
+
+/*START RESPONSIVE PART*/
+
+@media (max-width: 320px){
+  .header .navbar .container h2,
+  .header .navbar .container ul,
+  .header .navbar .container ul li,
+  .footer{
+    margin: auto;
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
+.header {
+  padding-bottom: 20px;
+}
+  .header .navbar .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+  }
+}
+
+/*END RESPONSIVE PART*/

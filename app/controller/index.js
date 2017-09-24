@@ -4,12 +4,14 @@ const router = require('express').Router();
 const login = require('./login.js');
 const home = require('./home.js');
 const signup = require('./signup.js');
+const search = require('./search.js');
   // example for routes
 router.get('/', home);
 router.get('/customer', (req, res) => {
   res.send('customer page');
 });
 
+router.get('/search', search);
 router.get('/login', login.get);
 router.post('/login', login.post);
 router.post('/signup', signup.post);
