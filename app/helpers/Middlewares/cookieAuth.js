@@ -1,8 +1,8 @@
 const jwt = require('jsonwebtoken');
 const router = require('../../controller/index.js');
 module.exports = (req, res, next) => {
-  const {cookie} = req;
-  if (!cookie) {
+  const {cookies} = req;
+  if (!cookies.token) {
     if (req.url === '/signup') {
       if (req.method === 'POST') {
         req.user = {
@@ -12,29 +12,28 @@ module.exports = (req, res, next) => {
           address: req.body.address
         };
       }
-      next();
+      return next();
     }
     const routsList = router.stack.map(route => route.route.path);
-    console.log(JSON.stringify(routsList));
     if (req.url === '/login' && req.method === 'POST') {
       const email = req.body.username;
       const password = req.body.password;
       req.user = {email: email, password: password};
-      next();
+      return next();
     }
     if (routsList.indexOf(req.url) !== -1) {
-      req.url = '/login'; req.method = 'GET';
+      res.redirect('/');
+      return;
     }
-    next();
+    return next();
   } else {
-    const token = req.cookie.token;
-    const userId = req.cookie.user_id;
+    const token = cookies.token;
+    const userId = cookies.user_id;
     jwt.verify(token, 'theSaltForSMDM', (err, email) => {
-      if (err) next(err);
+      if (err) return next(err);
       else {
-        req.url = req.url === '/login' ? '/' : req.url;
         req.user = {email: email, userId: userId};
-        next();
+        return next();
       }
     });
   }

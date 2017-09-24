@@ -1,15 +1,12 @@
 const dbConnection = require('../database_build/db_connection.js');
 exports.signUpNewUser = (user, getStatus) => {
   const sql = {
-    text: 'INSERT INTO users (username , password ,email,address) VALUES ($1 , $2 ,$3 ,$4)',
-    values: [ user.username, user.pwd, user.email, user.address ]
+    text: 'INSERT INTO users (username , password ,email,address) VALUES ($1 , $2 ,$3 ,$4) RETURNING *',
+    values: [ user.username, user.password, user.email, user.address ]
   };
-  dbConnection.query(sql, (err, status) => {
-    if (err) {
-      getStatus(err);
-    } else {
-      getStatus(null, true);
-    }
+  dbConnection.query(sql, (err, res) => {
+    if (err) return getStatus(err);
+    getStatus(null, res.rows[0]);
   });
 };
 
