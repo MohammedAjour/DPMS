@@ -1,7 +1,9 @@
-<form class="" action="index.html" method="post">
+{{#if error}} this.error {{/if}}
+<form class="signUp" style="display:flex;flex-direction:column;"action="/signup" method="post">
   <input type="text" name="name" placeholder="Enter your name">
-  <input type="password" name="pwd" placeholder="Enter a password for the account">
-  <input type="password" name="confirmPwd" placeholder="Enter ">
-  <input type="email" name="email" placeholder="Enter ">
-  <input type="address" name="address" placeholder="Enter ">
+  <input type="password" name="pwd" placeholder="Enter a password ,must be more than 6 characters ">
+  <input type="password" name="confirmPwd" placeholder="confirm the password">
+  <input type="email" name="email" placeholder="Enter your email">
+  <input type="address" name="address" placeholder="Enter your address">
+  <input type="submit" name="submit" value="Sign Up">
 </form>
