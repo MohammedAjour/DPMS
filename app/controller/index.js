@@ -3,13 +3,17 @@ const router = require('express').Router();
   // example for requiring controllers
 const login = require('./login.js');
 const home = require('./home.js');
+const signup = require('./signup.js');
   // example for routes
 router.get('/', home);
 router.get('/customer', (req, res) => {
   res.send('customer page');
 });
+
 router.get('/login', login.get);
 router.post('/login', login.post);
+router.post('/signup', signup.post);
+router.get('/signup', signup.get);
 router.get('*', (req, res) => {
   res.status(404);
   res.send('URL cannot found' + JSON.stringify({ url: req.protocol + '://' + req.get('host') + req.originalUrl }));
