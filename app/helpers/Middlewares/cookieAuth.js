@@ -16,9 +16,10 @@ module.exports = (req, res, next) => {
     }
     const routsList = router.stack.map(route => route.route.path);
     if (req.url === '/login' && req.method === 'POST') {
-      const email = req.body.username;
+      const email = req.body.email;
       const password = req.body.password;
       req.user = {email: email, password: password};
+      console.log(req.user);
       return next();
     }
     if (routsList.indexOf(req.url) !== -1 && req.url !== '/login') {
