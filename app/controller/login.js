@@ -1,22 +1,23 @@
 const {loginFormValidator} = require('../helpers/validator.js');
-const {checkUser} = require('../models/queries/db_queries.js');
+const {isUser} = require('../models/queries/db_queries.js');
 const jwtMaker = require('../helpers/cookieEncrypt.js');
+const bcrypt = require('bcrypt');
 exports.post = (req, res, next) => {
   const {user} = req;
-  // validat the reiceived users info
-  // checke if the cridts is right
-    //
-  // redirecte the user to home
-  console.log(user);
   if (!loginFormValidator(user).valid) return res.render('login', {errStatus: true, err: 'invalid email address'});
-  checkUser(user, (err, result) => {
+  // user.password = hash;
+  isUser(user.email, (err, result) => {
     if (err) return next(err);
-    if (!result.rows.length > 0) return res.render('login', {errStatus: true, err: 'this user not exist'});
-    const user = {username: result.rows[0].name, email: result.rows[0].email, userID: result.rows[0].id};
-    jwtMaker(user, (err, token) => {
+    if (!result) return res.render('login', {errStatus: true, err: 'this user not exist'});
+    bcrypt.compare(user.password, result.password, function (err, hashMatched) {
       if (err) return next(err);
-      res.cookie('token', token, { httpOnly: true });
-      return res.redirect('/');
+      if (!hashMatched) return res.render('login', {errStatus: true, err: 'wrong passwords'});
+      const user = {username: result.username, email: result.email, userID: result.id};
+      jwtMaker(user, (err, token) => {
+        if (err) return next(err);
+        res.cookie('token', token, { httpOnly: true });
+        return res.redirect('/');
+      });
     });
   });
 };

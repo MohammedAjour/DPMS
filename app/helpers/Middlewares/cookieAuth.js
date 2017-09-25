@@ -19,7 +19,6 @@ module.exports = (req, res, next) => {
       const email = req.body.email;
       const password = req.body.password;
       req.user = {email: email, password: password};
-      console.log(req.user);
       return next();
     }
     if (routsList.indexOf(req.url) !== -1 && req.url !== '/login') {

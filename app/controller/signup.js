@@ -18,6 +18,7 @@ exports.post = (req, res, next) => {
             // the user already exist ,redirect him home
     bcrypt.hash(user.password, 10, (err, hash) => {
       if (err) return next(err);
+      user.password = hash;
       signUpNewUser(user, (err, insertionState) => {
         if (err) return next(err);
         const user = { name: insertionState.username, email: insertionState.email, userID: insertionState.id };
