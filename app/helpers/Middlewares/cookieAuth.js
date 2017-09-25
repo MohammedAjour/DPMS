@@ -1,40 +1,39 @@
 const jwt = require('jsonwebtoken');
 const router = require('../../controller/index.js');
 module.exports = (req, res, next) => {
-  const {cookie} = req;
-  if (!cookie) {
+  const {cookies} = req;
+  if (!cookies.token) {
     if (req.url === '/signup') {
       if (req.method === 'POST') {
         req.user = {
-          username: req.body.username,
+          username: req.body.name,
           password: req.body.pwd,
           email: req.body.email,
           address: req.body.address
         };
       }
-      next();
+      return next();
     }
     const routsList = router.stack.map(route => route.route.path);
-    console.log(JSON.stringify(routsList));
     if (req.url === '/login' && req.method === 'POST') {
       const email = req.body.username;
       const password = req.body.password;
       req.user = {email: email, password: password};
-      next();
+      return next();
     }
-    if (routsList.indexOf(req.url) !== -1) {
-      req.url = '/login'; req.method = 'GET';
+    if (routsList.indexOf(req.url) !== -1 && req.url !== '/login') {
+      res.redirect('/login');
+      return;
     }
-    next();
+    return next();
   } else {
-    const token = req.cookie.token;
-    const userId = req.cookie.user_id;
-    jwt.verify(token, 'theSaltForSMDM', (err, email) => {
-      if (err) next(err);
+    if (req.url === '/login' || req.url === '/signup') return res.redirect('/');
+    const token = cookies.token;
+    jwt.verify(token, process.env.SECRIT, (err, user) => {
+      if (err) return next(err);
       else {
-        req.url = req.url === '/login' ? '/' : req.url;
-        req.user = {email: email, userId: userId};
-        next();
+        req.user = {username: user.name, email: user.email};
+        return next();
       }
     });
   }

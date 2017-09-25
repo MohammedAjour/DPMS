@@ -1,9 +1,10 @@
 
 exports.post = (req, res) => {
-  const {username, email, password} = req.user;
+  const {USER} = req;
   // checke if the cridts is right
   res.send('login');
 };
 exports.get = (req, res) => {
-  res.send(q);
+  console.log('login form');
+  res.render('login', {layout: 'formMain'});
 };
