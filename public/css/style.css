@@ -1,5 +1,4 @@
 /*COLORS
-
 #d9dde0 = GRAY
 #838587 = DARK GRAY
 #184572 = active link dark bleu
@@ -31,6 +30,7 @@ width: 80%;
 
 .header{
   background-color: #373d42;
+  height: 100px;
 }
 
 .header .container{
@@ -49,11 +49,11 @@ width: 80%;
   overflow: hidden;
 }
 
-.header .navbar h2 {
+.header .navbar .container div h2 {
   display: flex;
   justify-content: center;
+  align-items: center;
   /*float: left;*/
-  margin-left: 50px;
   overflow: hidden;
   font-family: 'Baloo Bhaijaan', cursive;
 }
@@ -65,12 +65,12 @@ width: 80%;
   padding-left: 0;
   overflow: hidden;
   float: right;
-  margin-right: 20px;
+  text-align: center;
 }
 
-.header .navbar ul li{
-  float: left;
-  padding: 10px;
+
+ul{
+  list-style: none;
 }
 
 .header .navbar ul li a{
@@ -82,28 +82,115 @@ width: 80%;
 
 .header .navbar ul li a:hover,
 .header .navbar ul li.active a{
-  color: #70b7ff;
+  color: #82bf0d;
+}
+
+.header .navbar .container div{
+  width: 33.333%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+img{
+  width: 40px;
+  height: 40px;
 }
 /*END NAVBAR*/
 
-/*SHOWCASE*/
-.header .showcase{
-  -webkit-background-size: cover;  /*  CSS3  */
-  -moz-background-size: cover;  /*  CSS3  */
-  -o-background-size: cover;  /*  CSS3  */
-  background-size: cover;  /*  CSS3  */
-  height: 600px;
-}
 
-.showcase{
-  background-color: #afcdea;
-}
-
-/*END SHOWCASE*/
 
 /*END HEADER PART*/
 
 /*START BODY PART*/
+
+/*SHOWCASE*/
+.showcase .container{
+  -webkit-background-size: cover;  /*  CSS3  */
+  -moz-background-size: cover;  /*  CSS3  */
+  -o-background-size: cover;  /*  CSS3  */
+  background-size: cover;  /*  CSS3  */
+  height: 500px;
+  width: 100%;
+  background-color: #e6f4cb;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+/*END SHOWCASE*/
+
+.showcase .container .rside {
+  height: 500px;
+  width: 70%;
+  color: black;
+  background-color: gray;
+  float: right;
+  overflow: hidden;
+  text-align: center;
+}
+.showcase .container .rside .container {
+  background-color: #d9ddd9;
+  }
+
+.showcase .container .lside {
+  height: 500px;
+  width: 30%;
+  color: black;
+  background-color: #e2f7b9;
+  float: left;
+  overflow: hidden;
+}
+
+/*.showcase .container .rside .userimage img{
+  width: 100px;
+  height: 100px;
+  margin-top: 30px;
+}*/
+.showcase .container .lside .container{
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.showcase .container .lside .container .userimage{
+width: 100%;
+}
+
+.showcase .container .lside .container .userimage img{
+width: 100px;
+height: 100px;
+margin-top: 20px;
+}
+
+.showcase .container .lside .container .cinfo{
+width: 100%;
+margin-top: 20px;
+}
+
+.cinfo{
+text-align: center;
+}
+
+h4{
+  text-align: center;
+  border: solid 2px #F44336;
+  border-radius: 25px;
+    color: #fff;
+    background: red;
+    width: 80%;
+}
+
+/*START TABLE PART*/
+
+.showcase .container .rside .container table{
+  width: 100%;
+  color: #7b818c;
+  margin-top: 20px;
+}
+
+/*END TABLE PART*/
 
 /*END BODY PART*/
 
@@ -114,32 +201,271 @@ width: 80%;
   text-align: center;
   color: white;
   padding: 20px;
-  background-color: #838587;
+  background-color: #373d42;
+  overflow: hidden;
 }
 /*END FOOTER PART*/
 
 
+
+/*START LOGIN FORM*/
+
+
+.loginshowcase {
+  -webkit-background-size: cover;  /*  CSS3  */
+  -moz-background-size: cover;  /*  CSS3  */
+  -o-background-size: cover;  /*  CSS3  */
+  background-size: cover;  /*  CSS3  */
+  height: 500px;
+  width: 100%;
+  background-color: #b6d8b3;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.logincontainer {
+    width: 70%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /*padding: 20px;
+    padding: 60px;*/
+}
+
+.errornote{
+  color: red;
+  float: left;
+  padding: 15px;
+}
+
+#loginform{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.block{
+  display: inline-block;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 70%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical  Allow the user to vertically resize the textarea (not horizontally)
+}
+input[type=password], select, textarea {
+    width: 70%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical  Allow the user to vertically resize the textarea (not horizontally)
+}
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+
+
+/*END LOGIN FORM*/
+
+
+/*START SEARCH FORM*/
+
+
+.searchshowcase {
+  -webkit-background-size: cover;  /*  CSS3  */
+  -moz-background-size: cover;  /*  CSS3  */
+  -o-background-size: cover;  /*  CSS3  */
+  background-size: cover;  /*  CSS3  */
+  height: 500px;
+  width: 100%;
+  background-color: #b6d8b3;
+  overflow: hidden;
+
+}
+
+.searchshowcase .container{
+  display: flex;
+  /*justify-content: center;*/
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  height: 500px;
+}
+
+.searchinput {
+    width: 80%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    text-align: center;
+    margin-top: 20px;
+    /*padding: 20px;
+    padding: 60px;*/
+}
+
+.resultcontainer{
+  margin-top: 20px;
+  background-color: #f2f2f2;
+  width: 80%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  display: flex;
+  justify-content: space-between;
+}
+
+.resultcontainer div{
+  width: 33.333%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resultcontainer div:nth-child(2){
+  width: 33.333%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.totaldebt{
+  color: red;
+}
+
+/*END SEARCH FORM*/
+
+/*START ADD DEBT PART*/
+
+.adddebtshowcase {
+  -webkit-background-size: cover;  /*  CSS3  */
+  -moz-background-size: cover;  /*  CSS3  */
+  -o-background-size: cover;  /*  CSS3  */
+  background-size: cover;  /*  CSS3  */
+  height: 500px;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.adddebtshowcase .container{
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.adddebtshowcase .container #addbutton{
+display: flex;
+justify-content: center;
+
+}
+
+.add_debt{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.add_debt div{
+  text-align: center;
+  padding: 10px;
+  background-color: #dcead7;
+}
+
+#add_icon{
+  text-align: center;
+  padding: 10px;
+  background-color: white;
+}
+
+#add_icon img{
+  width: 30px;
+  height: 40px;
+  cursor: pointer;
+}
+
+
+
+/*END ADD DEBT PART*/
+
+
+
+
+
+
+
+
 /*START RESPONSIVE PART*/
 
-@media (max-width: 320px){
-  .header .navbar .container h2,
-  .header .navbar .container ul,
-  .header .navbar .container ul li,
+@media (max-width: 500px){
+  .header .container,
+  .header .navbar .container,
+  .showcase .container .rside,
+  .showcase .container .lside,
   .footer{
-    margin: auto;
+    /*margin: auto;
     width: 100%;
     float: none;
-    text-align: center;
+    text-align: center;*/
+    width: 100%;
+       float: none;
+       text-align: center;
+
   }
 .header {
-  padding-bottom: 20px;
+  padding-bottom: 100px;
+  /*display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;*/
 }
   .header .navbar .container {
+    width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     text-align: center;
-
+    flex-direction: column;
   }
 }
 
