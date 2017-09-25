@@ -6,5 +6,5 @@ exports.post = (req, res) => {
 };
 exports.get = (req, res) => {
   console.log('login form');
-  res.render('login');
+  res.render('login', {layout: 'formMain'});
 };

@@ -4,15 +4,20 @@ const router = require('express').Router();
 const login = require('./login.js');
 const home = require('./home.js');
 const signup = require('./signup.js');
-const customerSearch = require('./customerSearch.js');
+const search = require('./search.js');
+const logout = require('./logout.js');
+const customer = require('./customer.js');
   // example for routes
 router.get('/', home);
-router.get('/search', customerSearch);
 
+router.get('/search', search);
+// router.get('/customer', customer);
+router.get('/customer/:id', customer);
 router.get('/login', login.get);
 router.post('/login', login.post);
 router.post('/signup', signup.post);
 router.get('/signup', signup.get);
+router.get('/logout', logout);
 router.get('*', (req, res) => {
   res.status(404);
   res.send('URL cannot found' + JSON.stringify({ url: req.protocol + '://' + req.get('host') + req.originalUrl }));

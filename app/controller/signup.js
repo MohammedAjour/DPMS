@@ -3,7 +3,7 @@ const {regFormValidator} = require('../helpers/validator.js');
 const cookieEncrypt = require('../helpers/cookieEncrypt.js');
 const bcrypt = require('bcrypt');
 exports.get = (req, res, next) => {
-  res.render('signUp', {valid: true});
+  res.render('signUp', {layout: 'formMain'});
 };
 exports.post = (req, res, next) => {
   // validate the form
@@ -16,18 +16,15 @@ exports.post = (req, res, next) => {
     if (err) return next(err);
     if (exist) return res.redirect('/login');
             // the user already exist ,redirect him home
-    bcrypt.genSalt(10, function (err, salt) {
+    bcrypt.hash(user.password, 10, (err, hash) => {
       if (err) return next(err);
-      bcrypt.hash(user.password, salt, (err, hash) => {
+      signUpNewUser(user, (err, insertionState) => {
         if (err) return next(err);
-        signUpNewUser(user, (err, insertionState) => {
+        const user = { name: insertionState.username, email: insertionState.email, userID: insertionState.id };
+        cookieEncrypt(user, (err, token) => {
           if (err) return next(err);
-          const user = { name: insertionState.username, email: insertionState.email, userID: insertionState.id };
-          cookieEncrypt(user, (err, token) => {
-            if (err) return next(err);
-            res.cookie('token', token, { httpOnly: true });
-            res.redirect('/');
-          });
+          res.cookie('token', token, { httpOnly: true });
+          res.redirect('/');
         });
       });
     });
