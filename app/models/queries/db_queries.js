@@ -28,13 +28,7 @@ exports.checkUser = (user, exist) => {
     text: 'SELECT email ,username FROM users WHERE email = $1 AND username =$2',
     values: [ user.email, user.username ]
   };
-  dbConnection.query(sql, (err, result) => {
-    if (err) {
-      exist(err);
-    } else {
-      exist(null, result.rows[0]);
-    }
-  });
+  dbConnection.query(sql, exist);
 };
 exports.findCustomer = (searchKey, userID, getList) => {
   const sql = {
