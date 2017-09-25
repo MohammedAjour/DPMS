@@ -5,9 +5,9 @@ DROP TABLE IF EXISTS users, customers, debts CASCADE;
 
 CREATE TABLE users(
 id SERIAL PRIMARY KEY,
-username VARCHAR(100) NOT NULL UNIQUE,
+username VARCHAR(100) NOT NULL ,
 password VARCHAR(100) NOT NULL,
-email VARCHAR NOT NULL,
+email VARCHAR NOT NULL UNIQUE,
 address TEXT NOT NULL DEFAULT 'gaza'
 );
 
@@ -29,7 +29,7 @@ customer_id INTEGER REFERENCES customers(id)
 );
 
 insert into users (username, password, email) values ('sami','123456','ahmed@gmail.com');
-insert into users (username, password, email) values ('ahmed','123456','ahmed@gmail.com');
+insert into users (username, password, email) values ('ahmed','123456','eslam@gmail.com');
 insert into users (username, password, email) values ('khaled','123456','khaled@gmail.com');
 
 insert into customers (customername, phone, address, user_id) values ('kamal','0599544558','gaza',1);
