@@ -32,7 +32,7 @@ module.exports = (req, res, next) => {
     jwt.verify(token, process.env.SECRIT, (err, user) => {
       if (err) return next(err);
       else {
-        req.user = {username: user.name, email: user.email};
+        req.user = {username: user.name, email: user.email, userID: user.userID};
         return next();
       }
     });

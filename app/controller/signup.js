@@ -22,7 +22,7 @@ exports.post = (req, res, next) => {
         if (err) return next(err);
         signUpNewUser(user, (err, insertionState) => {
           if (err) return next(err);
-          const user = {name: insertionState.username, email: insertionState.email};
+          const user = { name: insertionState.username, email: insertionState.email, userID: insertionState.id };
           cookieEncrypt(user, (err, token) => {
             if (err) return next(err);
             res.cookie('token', token, { httpOnly: true });
