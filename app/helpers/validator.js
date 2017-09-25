@@ -3,7 +3,7 @@ exports.regFormValidator = (userSubmitedData) => {
   const regexEmailValidator = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   let valid = false;
   let message = {};
-  if (userSubmitedData.username !== '' && userSubmitedData.password !== '') {
+  if (userSubmitedData.username !== undefined && userSubmitedData.password !== undefined) {
     if (!userSubmitedData.username.trim().length < 3) {
       if (!userSubmitedData.password.trim().length < 6) {
         if (regexEmailValidator.test(userSubmitedData.email.trim())) {

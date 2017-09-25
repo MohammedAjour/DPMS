@@ -6,7 +6,7 @@ module.exports = (req, res, next) => {
     if (req.url === '/signup') {
       if (req.method === 'POST') {
         req.user = {
-          username: req.body.username,
+          username: req.body.name,
           password: req.body.pwd,
           email: req.body.email,
           address: req.body.address
@@ -21,18 +21,18 @@ module.exports = (req, res, next) => {
       req.user = {email: email, password: password};
       return next();
     }
-    if (routsList.indexOf(req.url) !== -1) {
-      res.redirect('/');
+    if (routsList.indexOf(req.url) !== -1 && req.url !== '/login') {
+      res.redirect('/login');
       return;
     }
     return next();
   } else {
+    if (req.url === '/login' || req.url === '/signup') return res.redirect('/');
     const token = cookies.token;
-    const userId = cookies.user_id;
-    jwt.verify(token, 'theSaltForSMDM', (err, email) => {
+    jwt.verify(token, process.env.SECRIT, (err, user) => {
       if (err) return next(err);
       else {
-        req.user = {email: email, userId: userId};
+        req.user = {username: user.name, email: user.email};
         return next();
       }
     });
