@@ -26,7 +26,7 @@ app.engine(
   })
 );
 app.use(AuthCookies);
-app.set('port', process.env.PORT || 4000);
+app.set('port', process.env.PORT || 8080);
 app.use(controller);
 app.use(errorHandler);
 
