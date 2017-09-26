@@ -21,6 +21,10 @@
     width: 80%;
 }
 
+.newCustomerForm .popUpContainer .newcustomercontainer{
+  display: flex;
+  align-self: center;
+}
 /* The Close Button */
 .close {
     color: #aaaaaa;

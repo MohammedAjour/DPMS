@@ -162,17 +162,14 @@ img{
       align-items: center;
       }
 
-
-
-
-.showcase .container .lside {
-  height: 500px;
-  width: 30%;
-  color: black;
-  background-color: #e2f7b9;
-  float: left;
-  overflow: hidden;
-}
+    .showcase .container .lside {
+      height: 500px;
+      width: 30%;
+      color: black;
+      background-color: #e2f7b9;
+      float: left;
+      overflow: hidden;
+    }
 
 /*.showcase .container .rside .userimage img{
   width: 100px;
@@ -528,7 +525,7 @@ input[type=email], select, textarea {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: fixed;
+    /*position: fixed;*/
   }
 
   .newcustomercontainer form{
@@ -646,6 +643,12 @@ input[type=email], select, textarea {
   cursor: pointer;
 }
 
+/*.searchshowcase .addCustomer .newCustomerForm{
+  display: flex;
+align-items: center;
+justify-content: center;
+}*/
+
 /*END SEARCH FORM*/
 
 /*START ADD DEBT PART*/
@@ -754,34 +757,15 @@ justify-content: center;
 /*START RESPONSIVE PART*/
 
 @media (max-width: 500px){
-  .header .container,
-  .header .navbar .container,
-  .showcase .container .rside,
-  .showcase .container .lside,
-  .footer{
-    /*margin: auto;
-    width: 100%;
-    float: none;
-    text-align: center;*/
-    width: 100%;
-       float: none;
-       text-align: center;
-
-  }
-.header {
-  padding-bottom: 100px;
-  /*display: flex;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;*/
+.header{
+  padding-bottom: 200px;
 }
-  .header .navbar .container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-  }
+.header .navbar .container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 }
 
 /*END RESPONSIVE PART*/
