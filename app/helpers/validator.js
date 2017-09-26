@@ -16,11 +16,12 @@ exports.regFormValidator = (userSubmitedData) => {
   } else message.emptyFileld = 'Please fill The form';
   return {valid: valid, errMsg: message};
 };
-exports.loginFormValidator = (SubmitedLoginForm) => {
+exports.loginFormValidator = (submitedLoginForm) => {
   const regexEmailValidator = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   let valid = false;
   let message = {};
-  if (regexEmailValidator.test(SubmitedLoginForm.email.trim())) {
+  console.log(submitedLoginForm);
+  if (regexEmailValidator.test(submitedLoginForm.email)) {
     valid = true;
   } else {
     message.email = 'invalid email address';
