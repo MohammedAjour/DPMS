@@ -5,7 +5,7 @@ const { addCustomer,
 exports.post = (req, res, next) => {
   // adding new customer
   const { name, phone, address } = req.body;
-  const { userID } = req.user;
+  const { userID } = req.user; console.log(req.body, userID);
   // validate
   if (!(name && phone && name.length > 3 && phone.length > 6)) return res.json({status: false, err: 'Not Valid customer details'});
   // create customer
@@ -19,7 +19,7 @@ exports.post = (req, res, next) => {
 exports.get = (req, res, next) => {
   // example route `/customer/41` customerId=req.params.id = 41
   const customerId = req.params.id;
-  const { userID } = req.user;
+  let { userID } = req.user;
   getCustomer(customerId, userID, (err, result) => {
     if (err) return next(err);
     if (result.rows.length < 1) return res.render('customerNotFound');
@@ -29,8 +29,8 @@ exports.get = (req, res, next) => {
       address: result.rows[0].address
     };
     getCustomerDebts(customerId, (err, debts) => {
-      if (err) return next(err);
-      custmerPageDetails.debts = debts.rows;
+      if (err) return next(err);console.log(debts);
+      custmerPageDetails.debts = debts.rows; console.log(custmerPageDetails);
       return res.render('customer', custmerPageDetails);
     });
   });
