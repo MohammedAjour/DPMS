@@ -37,3 +37,25 @@ exports.findCustomer = (searchKey, userID, getList) => {
 
   dbConnection.query(sql, getList);
 };
+exports.addCustomer = (customer, userId, status) => {
+  const sql = {
+    text: `INSERT INTO customers(customername ,address ,phone ,user_id)  VALUES ($1 , $2 , $3 , $4 )`,
+    values: [ customer.name, customer.address, customer.phone, userId ]
+  };
+
+  dbConnection.query(sql, status);
+};
+exports.getCustomerDebts = (customerId, debts) => {
+  const sql = {
+    text: `SELECT * FROM debts WHERE customer_id=$1`,
+    value: [ customerId ]
+  };
+  dbConnection.query(sql, debts);
+};
+exports.getCustomer = (customerId, userID, customerDetails) => {
+  const sql = {
+    text: `SELECT * FROM customers WHERE id=$1 AND user_id=$2`,
+    values: [ customerId, userID ]
+  };
+  dbConnection.query(sql, customerDetails);
+};
