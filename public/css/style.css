@@ -17,6 +17,14 @@ width: 100%;
 
 }
 
+a{
+  cursor: pointer;
+}
+
+h3{
+  color: #5b5c5e;
+}
+
 .container{
   width: 1170px;
   margin: auto;
@@ -130,9 +138,32 @@ img{
   overflow: hidden;
   text-align: center;
 }
+
 .showcase .container .rside .container {
-  background-color: #d9ddd9;
+  background-color: #f2f3f4;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
   }
+
+  .showcase .container .rside .table {
+    background-color: #f2f3f4;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .showcase .container .rside .total {
+      background-color: #f2f3f4;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: center;
+      }
+
+
+
 
 .showcase .container .lside {
   height: 500px;
@@ -153,10 +184,14 @@ width: 100%;
 display: flex;
 flex-direction: column;
 align-items: center;
+background-color: #cbd9e4;
 }
 
 .showcase .container .lside .container .userimage{
 width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .showcase .container .lside .container .userimage img{
@@ -168,27 +203,48 @@ margin-top: 20px;
 .showcase .container .lside .container .cinfo{
 width: 100%;
 margin-top: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
 }
 
-.cinfo{
-text-align: center;
-}
 
 h4{
-  text-align: center;
-  border: solid 2px #F44336;
-  border-radius: 25px;
-    color: #fff;
-    background: red;
-    width: 80%;
+      text-align: center;
+      border: solid 2px #8ebcea;
+      border-radius: 25px;
+      color: #fff;
+      background: #607D8B;
+      width: 80%;
+      padding: 5px;
 }
 
+.adddebt_button{
+  cursor: pointer;
+}
 /*START TABLE PART*/
 
 .showcase .container .rside .container table{
-  width: 100%;
+  width: 80%;
   color: #7b818c;
   margin-top: 20px;
+}
+
+tr{
+  text-align: center;
+}
+
+table {
+  border-collapse: separate;
+}
+
+table thead th {
+  border-bottom: 2px solid #bfdeef;
+}
+
+table thead tr {
+  margin-bottom: 3px;
 }
 
 /*END TABLE PART*/
@@ -200,7 +256,10 @@ h4{
   display: flex;
   justify-content: center;
   text-align: center;
+  width: 100%;
+  position: fixed;
   color: white;
+  font-size: 10px;
   padding: 20px;
   background-color: #373d42;
   overflow: hidden;
@@ -295,10 +354,222 @@ input[type=submit]:hover {
     background-color: #f7a307;
 }
 
+input[type=email], select, textarea {
+    width: 70%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical  Allow the user to vertically resize the textarea (not horizontally)
+  }
+
+    input[type=address], select, textarea {
+        width: 70%; /* Full width */
+        padding: 12px; /* Some padding */
+        border: 1px solid #ccc; /* Gray border */
+        border-radius: 4px; /* Rounded borders */
+        box-sizing: border-box; /* Make sure that padding and width stays in place */
+        margin-top: 6px; /* Add a top margin */
+        margin-bottom: 16px; /* Bottom margin */
+        resize: vertical  Allow the user to vertically resize the textarea (not horizontally)
+      }
 /* Add a background color and some padding around the form */
 
 
 /*END LOGIN FORM*/
+
+/*START REGISTER NEW USER 'MANAGER'*/
+
+
+.newusershowcase {
+  -webkit-background-size: cover;  /*  CSS3  */
+  -moz-background-size: cover;  /*  CSS3  */
+  -o-background-size: cover;  /*  CSS3  */
+  background-size: cover;  /*  CSS3  */
+  height: 500px;
+  width: 100%;
+  background-color: #cbd9e4;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.newusercontainer {
+    width: 60%;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+.newusercontainer h3{
+  color: red;
+}
+/*.errornote{
+  color: red;
+  float: left;
+  padding: 15px;
+}
+
+#loginform{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.block{
+  display: inline-block;
+}*/
+
+.signUp input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical  Allow the user to vertically resize the textarea (not horizontally)
+}
+.signUp input[type=password], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical  Allow the user to vertically resize the textarea (not horizontally)
+}
+/* Style the submit button with a specific background color etc */
+.signUp input[type=submit] {
+    background-color: #4c85af;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+.signUp input[type=submit]:hover {
+    background-color: #f7a307;
+}
+
+.signUp input[type=email], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical  Allow the user to vertically resize the textarea (not horizontally)
+  }
+
+    .signUp input[type=address], select, textarea {
+        width: 100%; /* Full width */
+        padding: 12px; /* Some padding */
+        border: 1px solid #ccc; /* Gray border */
+        border-radius: 4px; /* Rounded borders */
+        box-sizing: border-box; /* Make sure that padding and width stays in place */
+        margin-top: 6px; /* Add a top margin */
+        margin-bottom: 16px; /* Bottom margin */
+        resize: vertical  Allow the user to vertically resize the textarea (not horizontally)
+      }
+
+/*END REGISTER NEW USER 'MANAGER'*/
+
+
+/*START REGISTER NEW CUSTOMER'*/
+
+/*.popUpContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.popUpContainer .newcustomershowcase {
+
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 500px;
+  width: 100%;
+  background-color: #cbd9e4;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}*/
+
+.newcustomercontainer {
+    width: 60%;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+  }
+
+  .newcustomercontainer form{
+    width: 80%;
+  }
+
+  .newcustomercontainer span{
+    float: left;
+  }
+
+  .register{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .register input[type=text], select, textarea {
+      width: 100%; /* Full width */
+      padding: 12px; /* Some padding */
+      border: 1px solid #ccc; /* Gray border */
+      border-radius: 4px; /* Rounded borders */
+      box-sizing: border-box; /* Make sure that padding and width stays in place */
+      margin-top: 6px; /* Add a top margin */
+      margin-bottom: 16px; /* Bottom margin */
+      resize: vertical  Allow the user to vertically resize the textarea (not horizontally)
+  }
+
+  /* Style the submit button with a specific background color etc */
+  .register input[type=submit] {
+      background-color: #4c85af;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+  }
+
+  .register input[type=submit]:hover {
+      background-color: #f7a307;
+  }
+
+/*END REGISTER NEW customer'*/
 
 
 /*START SEARCH FORM*/
@@ -311,7 +582,7 @@ input[type=submit]:hover {
   background-size: cover;  /*  CSS3  */
   height: 500px;
   width: 100%;
-  background-color: #b6d8b3;
+  background-color: #cbd9e4;
   overflow: hidden;
 
 }
@@ -367,6 +638,10 @@ input[type=submit]:hover {
 
 .totaldebt{
   color: red;
+}
+
+#add-btn{
+  cursor: pointer;
 }
 
 /*END SEARCH FORM*/
