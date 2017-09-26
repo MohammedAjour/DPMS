@@ -3,7 +3,7 @@ const { addCustomer,
         getCustomer } = require('../models/queries/db_queries.js');
 
 exports.post = (req, res, next) => {
-  // create new customer
+  // adding new customer
   const { name, phone, address } = req.body;
   const { userID } = req.user;
   // validate
@@ -29,10 +29,9 @@ exports.get = (req, res, next) => {
       address: result.rows[0].address
     };
     getCustomerDebts(customerId, (err, debts) => {
-      console.log(result.rows);
       if (err) return next(err);
-      custmerPageDetails.debts = debts;
-      res.render('customer', custmerPageDetails);
+      custmerPageDetails.debts = debts.rows;
+      return res.render('customer', custmerPageDetails);
     });
   });
 };

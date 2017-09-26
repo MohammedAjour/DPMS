@@ -39,7 +39,7 @@ exports.findCustomer = (searchKey, userID, getList) => {
 };
 exports.addCustomer = (customer, userId, status) => {
   const sql = {
-    text: `INSERT INTO customers(customername ,address ,phone ,user_id)  VALUES ($1 , $2 , $3 , $4 )`,
+    text: `INSERT INTO customers(customername ,address ,phone ,user_id)  VALUES ($1 , $2 , $3 , $4 ) RETURNING *`,
     values: [ customer.name, customer.address, customer.phone, userId ]
   };
 
