@@ -48,13 +48,14 @@ exports.addCustomer = (customer, userId, status) => {
 exports.getCustomerDebts = (customerId, debts) => {
   const sql = {
     text: `SELECT * FROM debts WHERE customer_id=$1`,
-    value: [ customerId ]
+    values: [ customerId ]
   };
   dbConnection.query(sql, debts);
 };
 exports.getCustomer = (customerId, userID, customerDetails) => {
+  console.log(customerId, userID);
   const sql = {
-    text: `SELECT * FROM customers WHERE id=$1 AND user_id=$2`,
+    text: 'SELECT * FROM customers WHERE id=$1 AND user_id=$2',
     values: [ customerId, userID ]
   };
   dbConnection.query(sql, customerDetails);
