@@ -11,7 +11,9 @@
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
-
+.newCustomerForm--open{
+  display:block;
+}
 /* Modal Content */
 .popUpContainer{
     background-color: #fefefe;
@@ -19,6 +21,9 @@
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+}
+.invalid{
+  color:red;
 }
 
 /* The Close Button */
