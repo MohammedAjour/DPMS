@@ -47,7 +47,7 @@ test('Testing queries on the database', (t) => {
       t.notOk(!err, err);
       t.end();
     } else {
-      t.equal(res.rows.length, 5, 'Should not be empty');
+      t.equal(res.rows.length > 0, true, 'Should not be empty');
       t.end();
     }
   });
