@@ -8,26 +8,25 @@
                 <tr>
                   <th>#</th>
                   <th>الصنف</th>
+                  <th>الكمية</th>
                   <th>السعر</th>
                 </tr>
               </thead>
               <tbody>
+                {{#each debts}}
                 <tr>
-                  <td>1</td>
-                  <td>أرز</td>
-                  <td>50</td>
+                  <td>{{id}}</td>
+                  <td>{{debt_type}}</td>
+                  <td>{{debt_quantity}}</td>
+                  <td>{{debt_price}}</td>
                 </tr>
-                <tr>
-                  <td>2</td>
-                  <td>سكر</td>
-                  <td>10</td>
-                </tr>
+                {{/each}}
               </tbody>
             </table>
           </div>
           <div class="total">
             <h4>المجموع</h4>
-            <h3>50</h3>
+            <h3>{{total}}</h3>
           </div>
 
         </div>
@@ -38,10 +37,10 @@
         <img src="/images/old.png" alt="cimage">
         </div>
         <div class="cinfo">
-          <h5>Name:{{customer}}</h5>
-          <h4>DEPT</h4>
-          <h5>Tel:</h5>
-          <h5>address</h5>
+          <h5>Name:{{name}}</h5>
+          <h4>DEPT : {{total}}</h4>
+          <h5>Tel:{{phone}}</h5>
+          <h5>address : {{address}}</h5>
         </div>
         <div class="adddebt_button">
           <img src="/images/add_dept.png" alt="add debt">

@@ -1,14 +1,17 @@
 var addCustomer = document.getElementById('addCustomer');
 var btn = document.getElementById('add-btn');
 var span = document.getElementsByClassName('close')[0];
+
+function hideNewCustomerForm () {
+  addCustomer.classList.remove('newCustomerForm--open');
+}
+
 btn.onclick = function () {
-  addCustomer.style.display = 'block';
+  addCustomer.classList.add('newCustomerForm--open');
 };
-span.onclick = function () {
-  addCustomer.style.display = 'none';
-};
+span.onclick = hideNewCustomerForm;
 window.onclick = function (event) {
   if (event.target === addCustomer) {
-    addCustomer.style.display = 'none';
+    hideNewCustomerForm();
   }
 };

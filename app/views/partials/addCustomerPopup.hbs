@@ -1,4 +1,4 @@
-<div id="addCustomer" class="newCustomerForm">
+<div id="addCustomer" class="newCustomerForm {{#if errMsg}}newCustomerForm--open{{/if}}">
   <!-- Modal content -->
   <!-- <div class="popUpContainer"> -->
 
@@ -11,6 +11,7 @@
               <input type="text" name="phone" placeholder="أدخل رقم هاتف الزبون">
               <input type="text" name="address" placeholder="أدخل عنوان الزبون">
               <input type="submit" name="submit" value="سجل الان">
+                {{#if errMsg}}<span class="invalid">{{errMsg}}</span>{{/if}}
             </form>
       </div>
     <!-- </div> -->
