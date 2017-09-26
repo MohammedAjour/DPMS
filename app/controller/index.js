@@ -9,10 +9,9 @@ const logout = require('./logout.js');
 const customer = require('./customer.js');
   // example for routes
 router.get('/', home);
-
 router.get('/search', search);
-// router.get('/customer', customer);
-router.get('/customer/:id', customer);
+router.post('/customer', customer.post);
+router.get('/customer/:id', customer.get);
 router.get('/login', login.get);
 router.post('/login', login.post);
 router.post('/signup', signup.post);
