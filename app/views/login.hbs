@@ -4,17 +4,19 @@
     <form id="loginform" action="/login" method="post">
 <!-- <div class="block"> -->
     <label for="username">اسم المستخدم:</label>
-    <input type="text" id="name" name="firstname" placeholder="اسم المستخدم هنا ...">
+    <input type="text" id="name" name="email" placeholder="اسم المستخدم هنا ...">
 <!-- </div> -->
 <!-- <div class="block"> -->
     <label for="password">كلمة السر:</label>
     <input type="password" name="password" placeholder="كلمة السر هنا ...">
 <!-- </div> -->
-
+    {{#if errStatus}}  <div class="errornote">
+      {{err}}
+    </div>{{/if}}
       <input type="submit" value="تسجيل الدخول">
 
     </form>
-
+  <a href='./signup' > انشأ حساب جديد</a>
     <div class="errornote">
 هل نسيت كلمة السر؟
     </div>
