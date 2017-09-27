@@ -39,7 +39,6 @@ h3{
 
 .header{
   background-color: #373d42;
-  height: 100px;
 }
 
 .header .container{
@@ -69,7 +68,7 @@ h3{
 
 
 .header .navbar ul{
-  display: block;
+  display: flex;
   list-style: none;
   padding-left: 0;
   overflow: hidden;
@@ -83,12 +82,13 @@ ul{
 }
 
 .header .navbar ul li a{
-  /*float: left;
-  padding: 10px;*/
+  /*float: left;*/
   text-decoration: none;
   color: #fff;
 }
-
+.username{
+      padding: 15px;
+}
 .header .navbar ul li a:hover,
 .header .navbar ul li.active a{
   color: #82bf0d;
@@ -524,7 +524,6 @@ border-radius: 7px;
 }*/
 
 .newcustomercontainer {
-    width: 60%;
     border-radius: 5px;
     background-color: #fff;
     text-align: center;
@@ -757,6 +756,7 @@ justify-content: center;
 .show404 .container img{
   height: 500px;
   width: 100%;
+  text-align: center;
 }
 
 /*END 404 PART*/
@@ -767,16 +767,21 @@ justify-content: center;
 
 /*START RESPONSIVE PART*/
 
-@media (max-width: 500px){
-.header{
-  padding-bottom: 200px;
-}
-.header .navbar .container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-}
 
+@media screen and (min-width: 480px) {
+  .newcustomercontainer{
+    width: 60% ;
+  }
+}
+@media screen and (max-width: 480px) {
+  .newcustomercontainer{
+    width: 90% ;
+  }
+  .header .navbar .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
 /*END RESPONSIVE PART*/
