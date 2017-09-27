@@ -22,9 +22,12 @@ a{
 }
 
 h3{
-  color: #5b5c5e;
+  color: #ffffff;
+  padding-left: 50px;
 }
-
+.total>h4{
+  padding-right: 50px;
+}
 .container{
   width: 1170px;
   margin: auto;
@@ -142,10 +145,21 @@ img{
 .showcase .container .rside .container {
   background-color: #f2f3f4;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;;
   flex-direction: column;
   }
-
+.total{
+  text-align: center;
+border: solid 2px #8ebcea;
+border-radius: 25px;
+color: #fff;
+background: #607D8B;
+/*width: 80%;*/
+padding: 5px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
   .showcase .container .rside .table {
     background-color: #f2f3f4;
     display: flex;
@@ -154,13 +168,13 @@ img{
     align-items: center;
     }
 
-    .showcase .container .rside .total {
+    /*.showcase .container .rside .total {
       background-color: #f2f3f4;
       display: flex;
       justify-content: flex-start;
       flex-direction: column;
       align-items: center;
-      }
+      }*/
 
     .showcase .container .lside {
       height: 500px;
@@ -206,16 +220,6 @@ align-items: center;
 flex-direction: column;
 }
 
-
-h4{
-      text-align: center;
-      border: solid 2px #8ebcea;
-      border-radius: 25px;
-      color: #fff;
-      background: #607D8B;
-      width: 80%;
-      padding: 5px;
-}
 
 .adddebt_button{
   cursor: pointer;
@@ -771,6 +775,9 @@ justify-content: center;
 @media screen and (min-width: 480px) {
   .newcustomercontainer{
     width: 60% ;
+    .header .container{
+      max-width: 560px
+    }
   }
 }
 @media screen and (max-width: 480px) {
