@@ -9,7 +9,8 @@
                   <th>#</th>
                   <th>الصنف</th>
                   <th>الكمية</th>
-                  <th>السعر</th>
+                  <th>سعر الوحدة</th>
+                  <th>السعر الاجمالي</th>
                 </tr>
               </thead>
               <tbody>
@@ -19,6 +20,7 @@
                   <td>{{debt_type}}</td>
                   <td>{{debt_quantity}}</td>
                   <td>{{debt_price}}</td>
+                  <td>{{getTotal debt_quantity debt_price}}</td>
                 </tr>
                 {{/each}}
               </tbody>
@@ -26,7 +28,7 @@
           </div>
           <div class="total">
             <h4>المجموع</h4>
-            <h3>{{total}}</h3>
+            <h3>{{getDebtsTotal debts}}</h3>
           </div>
 
         </div>
@@ -38,7 +40,7 @@
         </div>
         <div class="cinfo">
           <h5>الاسم:{{name}}</h5>
-          <h4>مجموع الديون : {{total}}</h4>
+          <h4>مجموع الديون : {{getDebtsTotal debts}}</h4>
           <div class="userInfo">
             <h5>رقم الجوال:{{phone}}</h5>
             <h5>العنوان : {{address}}</h5>

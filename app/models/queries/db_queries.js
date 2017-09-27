@@ -59,3 +59,11 @@ exports.getCustomer = (customerId, userID, customerDetails) => {
   };
   dbConnection.query(sql, customerDetails);
 };
+exports.getAllDebts = (userID, getList) => {
+  const sql = {
+    text: 'SELECT sum(debts.debt_price * debts.debt_quantity) FROM debts JOIN customers ON customers.id = debts.customer_id WHERE customers.user_id =$1',
+    values: [userID]
+  };
+
+  dbConnection.query(sql, getList);
+};

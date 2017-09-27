@@ -48,7 +48,6 @@ if (username) {
       } else {
         username.style.border = '1px solid green';
         validName.innerHTML = ' ';
-        // validName.innerHTML = '<span>Your username is valid :)</span>';
       }
     }
   });
@@ -66,7 +65,6 @@ email.addEventListener('focusout', function () {
     } else {
       email.style.border = '1px solid green';
       validEmail.innerHTML = ' ';
-    //  validEmail.innerHTML = '<span>Your email is valid :)</span>';
     }
   }
 });
@@ -84,7 +82,6 @@ password.addEventListener('focusout', function () {
   } else {
     password.style.border = '1px solid green';
     validPass.innerHTML = ' ';
-    // validPass.innerHTML = '<span>Accepted password :)</span>';
   }
 });
 
@@ -107,7 +104,6 @@ if (confirm) {
       } else {
         confirm.style.border = '1px solid green';
         validConf.innerHTML = ' ';
-        // validConf.innerHTML = '<p>It is ok :)</p>';
       }
     }
   });
@@ -126,7 +122,6 @@ if (address) {
       } else {
         address.style.border = '1px solid green';
         validAdd.innerHTML = ' ';
-        // validAdd.innerHTML = '<span>Your address is valid :)</span>';
       }
     }
   });
@@ -145,7 +140,6 @@ if (phone) {
       } else {
         phone.style.border = '1px solid green';
         validPhone.innerHTML = ' ';
-        // validPhone.innerHTML = '<p>Your phone is valid :)</p>';
       }
     }
   });
