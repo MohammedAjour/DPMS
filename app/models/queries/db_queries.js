@@ -32,7 +32,7 @@ exports.isUser = (email, exist) => {
 // };
 exports.findCustomer = (searchKey, userID, getList) => {
   const sql = {
-    text: `SELECT * FROM customers WHERE customername LIKE ${searchKey}% AND user_id = ${userID}`
+    text: `SELECT * FROM customers WHERE customername LIKE '${searchKey}%' AND user_id = '${userID}'`
   };
 
   dbConnection.query(sql, getList);
@@ -53,7 +53,6 @@ exports.getCustomerDebts = (customerId, debts) => {
   dbConnection.query(sql, debts);
 };
 exports.getCustomer = (customerId, userID, customerDetails) => {
-  console.log(customerId, userID);
   const sql = {
     text: 'SELECT * FROM customers WHERE id=$1 AND user_id=$2',
     values: [ customerId, userID ]

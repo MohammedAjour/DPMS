@@ -1,4 +1,5 @@
 module.exports = (req, res) => {
   // modify this code (just example)
-  res.render('home');
+  const { username } = req.user;
+  res.render('home', {username: username});
 };
