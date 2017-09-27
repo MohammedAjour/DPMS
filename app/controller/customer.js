@@ -32,9 +32,6 @@ exports.get = (req, res, next) => {
       if (err) return next(err);
       custmerPageDetails.username = req.user.username;
       custmerPageDetails.debts = debts.rows;
-      custmerPageDetails.total = debts.rows.reduce((acu, debt) => {
-        acu += debt.debt_price; return acu;
-      }, 0);
       return res.render('customer', custmerPageDetails);
     });
   });
