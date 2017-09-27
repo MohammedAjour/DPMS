@@ -412,6 +412,13 @@ input[type=email], select, textarea {
 .newusercontainer h3{
   color: red;
 }
+.customer{
+display: flex;
+padding: 15px;
+background-color: #cbd9e4;
+margin: 3;
+border-radius: 7px;
+}
 /*.errornote{
   color: red;
   float: left;
@@ -568,7 +575,10 @@ input[type=email], select, textarea {
   .register input[type=submit]:hover {
       background-color: #f7a307;
   }
-
+li{
+display: flex;
+padding: 15px;
+}
 /*END REGISTER NEW customer'*/
 
 
@@ -619,6 +629,7 @@ input[type=email], select, textarea {
   margin-bottom: 16px; /* Bottom margin */
   resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 

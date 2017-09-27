@@ -32,7 +32,7 @@ exports.isUser = (email, exist) => {
 // };
 exports.findCustomer = (searchKey, userID, getList) => {
   const sql = {
-    text: `SELECT * FROM customers WHERE customername LIKE ${searchKey}% AND user_id = ${userID}`
+    text: `SELECT * FROM customers WHERE customername LIKE '${searchKey}%' AND user_id = '${userID}'`
   };
 
   dbConnection.query(sql, getList);
