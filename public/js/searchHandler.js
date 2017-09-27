@@ -1,6 +1,5 @@
 (function () {
   var search = document.getElementById('search');
-  console.log(search);
   search.onkeyup = findCustomers;
   function findCustomers (e) {
     var xhr = new XMLHttpRequest();
@@ -13,7 +12,6 @@
     document.getElementsByClassName('resultcontainer')[0].innerHTML = err;
   }
   function renderSearchResultContainer (e) {
-    console.log(JSON.parse(e.target.response));
     var recivedCustomers = JSON.parse(e.target.response);
     var customers = document.getElementsByClassName('resultcontainer')[0];
     customers.innerHTML = '';

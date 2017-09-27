@@ -53,7 +53,6 @@ exports.getCustomerDebts = (customerId, debts) => {
   dbConnection.query(sql, debts);
 };
 exports.getCustomer = (customerId, userID, customerDetails) => {
-  console.log(customerId, userID);
   const sql = {
     text: 'SELECT * FROM customers WHERE id=$1 AND user_id=$2',
     values: [ customerId, userID ]
