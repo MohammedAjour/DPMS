@@ -67,3 +67,16 @@ exports.getAllDebts = (userID, getList) => {
 
   dbConnection.query(sql, getList);
 };
+exports.storeDebt = (records, status) => {
+  const sql = {
+    text: `INSERT INTO debts(debt_type ,debt_price,debt_quantity,customer_id) VALUES${records}`
+  };
+  dbConnection.query(sql, status);
+};
+// exports.storeDebt = (debt, customer_id, status) => {
+//   const sql = {
+//     text: 'INSERT INTO debts(debt_type ,debt_price,debt_quantity,customer_id) VALUES($1,$2,$3 ,$4)',
+//     values: [debt.type, debt.price, debt.quantity, customer_id]
+//   };
+//   dbConnection.query(sql, status);
+// };

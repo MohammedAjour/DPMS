@@ -13,7 +13,7 @@ router.get('/', home);
 router.get('/search', search);
 router.post('/customer', customer.post);
 router.get('/customer/:id', customer.get);
-router.get('/customer/:id/debt', debt.get);
+// router.get('/customer/:id/debt', debt.get);
 router.post('/customer/:id/debt', debt.post);
 router.get('/login', login.get);
 router.post('/login', login.post);
