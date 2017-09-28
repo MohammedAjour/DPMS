@@ -1,8 +1,28 @@
-exports.post = (req, res, nex) => {
+const {storeDebt} = require('../models/queries/db_queries.js');
+exports.post = (req, res, next) => {
 // adding the debts
-// const {debts } = req.body
-  res.send('addDebtHandler');
-};
-exports.get = (req, res, nex) => {
-  res.render('addDebts');
+// posted data shape [ {type,quantity,price},{},{}]
+// debt_type
+// debt_quantity
+// debt_price
+// dept_date
+// customer_id
+  let debtsBuffer = '';
+  req.on('data', (chunk) => {
+    debtsBuffer += chunk;
+  });// (debt_type ,debt_price,debt_quantity,customer_id)
+  req.on('end', () => {
+    const debts = JSON.parse(debtsBuffer);
+    const customerId = req.params.id;
+    let debtsRecords = debts.reduce((acc, debt) => {
+      acc += '(' + debt.type + ',' + debt.quantity + ',' + debt.price + ',' + customerId + '),';
+      return acc;
+    }, '');
+    debtsRecords = debtsRecords.substr(0, debtsRecords.length - 1);
+    console.log(debtsRecords);
+    storeDebt(debtsRecords, (err, status) => {
+      if (err) return next(err);
+      res.redirect(`/customer/${customerId}`);
+    });
+  });
 };
