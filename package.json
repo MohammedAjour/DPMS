@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/FACG2/SuperMarkets_Debt_Manager/issues"
   },
-  "homepage": "https://github.com/FACG2/SuperMarkets_Debt_Manager#readme",
+  "homepage": "https://github.com/FACG2/SuperMarkets_Debt_Manager",
   "devDependencies": {
     "shot": "^3.4.2",
     "tape": "^4.8.0",
